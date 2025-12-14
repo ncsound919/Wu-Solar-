@@ -1,0 +1,200 @@
+add on to the teaching structure so it has references for albums, field trips, outdoor exploration, instrumentals with study guides, and interactive quizzes
+
+Below is an additive JSON block you can merge into the previous teaching spec to extend it with **albums, field trips, outdoor exploration, instrumentals + study guides, and interactive quizzes**.[1][2]
+
+```json
+{
+  "extensions": {
+    "albums_integration": {
+      "description": "Tie specific Wu-Tang and solo albums to Chambers and lessons as canonical study artifacts.",
+      "features": [
+        "Album reference cards embedded in lessons (cover art, year, key themes).",
+        "Per-album 'Study Path' linking tracks to planets and concepts (e.g., Liquid Swords → Mercury/GZA/science).",
+        "Listening-mode timers and reflection prompts.",
+        "Optional 'album deep dive' projects for advanced learners."
+      ],
+      "data_model": {
+        "album": {
+          "id": "string",
+          "title": "string",
+          "artist": "string",
+          "year": "number",
+          "type": "group|solo",
+          "linked_planet_ids": ["string"],
+          "linked_chambers": ["string"],
+          "key_themes": ["string"],
+          "study_guide_id": "string"
+        },
+        "album_study_guide": {
+          "id": "string",
+          "album_id": "string",
+          "overview": "string",
+          "sections": [
+            {
+              "title": "string",
+              "description": "string",
+              "recommended_tracks": ["string"],
+              "guiding_questions": ["string"],
+              "associated_lessons": ["string"]
+            }
+          ]
+        }
+      }
+    },
+    "field_trips_and_outdoor_exploration": {
+      "description": "Designs activities that move learners outside with the night sky, local environment, and embodied systems thinking.",
+      "features": [
+        "Printable and mobile-friendly 'Field Mission' sheets.",
+        "GPS/context-aware prompts (e.g., urban vs. rural sky brightness observations).",
+        "Tasks that map real-world observations to Chambers (gravity, orbits, ecosystems).",
+        "Teacher tools for logging and debriefing field observations back in class."
+      ],
+      "data_model": {
+        "field_mission": {
+          "id": "string",
+          "title": "string",
+          "environment_type": "any|urban|suburban|rural",
+          "estimated_minutes": "number",
+          "required_materials": ["string"],
+          "linked_chamber": "string",
+          "steps": [
+            {
+              "id": "string",
+              "instruction": "string",
+              "observation_prompt": "string",
+              "reflection_prompt": "string"
+            }
+          ],
+          "follow_up_lesson_id": "string"
+        }
+      },
+      "examples": [
+        {
+          "id": "mission-night-sky-orbits",
+          "title": "Tracing Orbits Under the Night Sky",
+          "linked_chamber": "01_gravity_center",
+          "environment_type": "any"
+        },
+        {
+          "id": "mission-ecosystem-earth",
+          "title": "Neighborhood Ecosystem as Raekwon's Earth",
+          "linked_chamber": "02_inner_planets",
+          "environment_type": "urban"
+        }
+      ]
+    },
+    "instrumentals_and_study_guides": {
+      "description": "Use Wu-inspired instrumentals as focused study soundtracks with guided prompts.",
+      "features": [
+        "Instrumental playlists tagged by Chamber, planet, and difficulty.",
+        "Study guides synced to track lengths (e.g., 4-minute focused tasks).",
+        "Toggle 'focus mode' that dims UI and runs timed prompts with beats.",
+        "Attribution-safe original beats in Wu-adjacent style (no copyrighted samples)."
+      ],
+      "data_model": {
+        "instrumental_track": {
+          "id": "string",
+          "title": "string",
+          "producer_alias": "string",
+          "duration_seconds": "number",
+          "bpm": "number",
+          "mood_tags": ["string"],
+          "linked_chambers": ["string"],
+          "linked_lessons": ["string"]
+        },
+        "instrumental_study_session": {
+          "id": "string",
+          "title": "string",
+          "instrumental_ids": ["string"],
+          "structure": [
+            {
+              "track_id": "string",
+              "start_prompt": "string",
+              "task_type": "note_taking|diagram|concept_map|reflection",
+              "task_description": "string"
+            }
+          ]
+        }
+      }
+    },
+    "interactive_quizzes": {
+      "description": "Rich quiz experiences that blend science, culture, and systems challenges.",
+      "features": [
+        "Standalone 'Chamber Quizzes' unlocked after core lessons.",
+        "Mixed-mode quizzes: science facts, Wu history, and system scenarios in one flow.",
+        "Timed 'Cipher Rounds' with streak bonuses for consecutive correct answers.",
+        "Visual question types using planetary diagrams and orbit paths."
+      ],
+      "question_types_extra": [
+        "image_based_multiple_choice",
+        "planet_drag_to_orbit",
+        "timeline_construction (albums, missions, scientific milestones)",
+        "scenario_simulation_choice (change one planet/member and predict outcome)"
+      ],
+      "data_model": {
+        "quiz": {
+          "id": "string",
+          "title": "string",
+          "linked_chamber": "string",
+          "recommended_before_lessons": ["string"],
+          "recommended_after_lessons": ["string"],
+          "time_limit_seconds": "number|null",
+          "questions": ["string"]
+        },
+        "quiz_result": {
+          "id": "string",
+          "user_id": "string",
+          "quiz_id": "string",
+          "score_percent": "number",
+          "time_taken_seconds": "number",
+          "completed_at": "string",
+          "skill_deltas": {
+            "gravity_understanding": "number",
+            "planetary_science": "number",
+            "cultural_context": "number",
+            "systems_thinking": "number"
+          }
+        }
+      }
+    }
+  },
+  "integration_points": {
+    "albums_to_lessons": {
+      "description": "How albums and study guides plug into the teaching flow.",
+      "rules": [
+        "Each Chamber has at least one primary album reference.",
+        "Lessons can declare 'recommended_albums' to show context cards in the UI.",
+        "Album study sessions can be launched directly from LessonFlow or StudentPortal."
+      ]
+    },
+    "field_trips_to_classroom": {
+      "description": "How outdoor missions loop back into the platform.",
+      "rules": [
+        "Field missions generate reflection prompts that appear as journal entries.",
+        "TeacherConsole surfaces field mission completion stats per class.",
+        "LessonEngine can show 'Use Field Notes' hints on relevant steps."
+      ]
+    },
+    "instrumentals_to_focus_mode": {
+      "description": "How instrumentals are used during study.",
+      "rules": [
+        "StudentPortal offers 'Focus Session' tiles aligned to active Chamber.",
+        "LessonEngine can optionally wrap a step inside an instrumental study segment.",
+        "AudioPlayer respects global mute and shows clear non-copyright notice."
+      ]
+    },
+    "quizzes_to_assessment_engine": {
+      "description": "How interactive quizzes extend existing assessment logic.",
+      "rules": [
+        "Quiz definitions reuse the same question model as AssessmentEngine with added metadata.",
+        "ProgressTracking logs quiz results and updates skill + synergy profiles.",
+        "TeacherConsole can assign quizzes per class and see per-question analytics."
+      ]
+    }
+  }
+}
+```
+
+Citations:
+[1] Exploration Guide - No Man's Sky Wiki - Fandom https://nomanssky.fandom.com/wiki/Exploration_Guide
+[2] Open-World vs. Linear Games: Pros and Cons of Each Design ... https://www.geniuscrate.com/open-world-vs-linear-games-pros-and-cons-of-each-design-approach
