@@ -1,0 +1,315 @@
+{
+  "lessons": [
+    {
+      "id": "formation_pebble_accretion",
+      "title": "Pebble Accretion: Building Giants Fast",
+      "description": "Learn how centimeter-sized pebbles can be swept up rapidly by growing planetary cores, allowing gas giants like Jupiter to form in just a few million years—before the young Sun's radiation blows away the gas disk.",
+      "category": "Planetary Formation",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "Pebble accretion increases the cross section over which large bodies can accrete material, accelerating their growth. The rapid growth allows for formation of giant planet cores before dispersal of the gas disk.",
+          "source": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pebble_accretion",
+          "lines": "9-12"
+        }
+      ]
+    },
+    {
+      "id": "formation_grand_tack",
+      "title": "The Grand Tack: Jupiter's Bully Phase and Saturn's Rescue",
+      "description": "Explore how Jupiter's early inward migration plowed through the asteroid belt, starving Mars of material, and how Saturn's formation locked into a resonance that pulled both giants back outward, saving the inner solar system.",
+      "category": "Planetary Formation",
+      "difficulty": "Advanced",
+      "citations": []
+    },
+    {
+      "id": "formation_mercury_hit_run",
+      "title": "Mercury's Hit‑and‑Run Impact",
+      "description": "Discover how MESSENGER data revealed Mercury's rich volatile inventory, disproving a head‑on collision model and pointing to a grazing impact that stripped its mantle without vaporizing volatiles.",
+      "category": "Planetary Formation",
+      "difficulty": "Advanced",
+      "citations": []
+    },
+    {
+      "id": "robotic_juno_fuzzy_core",
+      "title": "Juno Reveals Jupiter's 'Fuzzy' Core",
+      "description": "Use gravity‑mapping data from the Juno mission to investigate Jupiter's diluted, partially dissolved core—a mixture of rock, gas, and dissolved pebbles that suggests a history of giant impacts.",
+      "category": "Robotic Explorers",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "Juno discovers that Jupiter's core is large, fuzzy and dilute.",
+          "source": "Mission Juno",
+          "url": "https://www.missionjuno.swri.edu/science-findings/jupiters-dilute-core",
+          "lines": "2-4"
+        },
+        {
+          "text": "NASA's Juno spacecraft found data suggesting the core is much larger than expected, and not solid. Instead, it's partially dissolved, leading researchers to describe the core as dilute, or 'fuzzy'.",
+          "source": "NASA Jupiter Facts",
+          "url": "https://science.nasa.gov/jupiter/jupiter-facts/",
+          "lines": "70-78"
+        }
+      ]
+    },
+    {
+      "id": "robotic_cassini_vertical_rings",
+      "title": "Cassini's Vertical Ring Structures",
+      "description": "Observe the towering walls of rubble in Saturn's rings, created by moon‑induced bending waves, revealing that the rings are not perfectly flat but have vertical relief up to miles high.",
+      "category": "Robotic Explorers",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "The Cassini mission observed several bending waves in Saturn's rings that are resonantly excited by moons that move on orbits inclined relative to the ring plane.",
+          "source": "ELSI Seminar",
+          "url": "https://www.elsi.jp/en/news_events/events/2024/bending_waves_vertical_rif_saturns_rings/",
+          "lines": "7-10"
+        },
+        {
+          "text": "Preliminary results show that the vertical scale height of the ring increases with the warp amplitude of the ring plane.",
+          "source": "ELSI Seminar",
+          "url": "https://www.elsi.jp/en/news_events/events/2024/bending_waves_vertical_rif_saturns_rings/",
+          "lines": "16-18"
+        }
+      ]
+    },
+    {
+      "id": "robotic_enceladus_plumes",
+      "title": "Enceladus: Geysers from a Subsurface Ocean",
+      "description": "Analyze Cassini data that confirmed geyser‑like jets of water vapor and ice particles erupting from Enceladus's south pole, providing direct evidence of a global salty ocean and potential habitability.",
+      "category": "Robotic Explorers",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "Cassini discovered that geyser-like jets spew water vapor and ice particles from an underground ocean beneath the icy crust of Enceladus.",
+          "source": "NASA Enceladus",
+          "url": "https://science.nasa.gov/mission/cassini/science/enceladus/",
+          "lines": "9-12"
+        }
+      ]
+    },
+    {
+      "id": "robotic_titan_vinyl_cyanide",
+      "title": "Titan's Vinyl Cyanide: A Path to Non‑Water Life?",
+      "description": "Investigate ALMA and Cassini detections of vinyl cyanide (acrylonitrile) in Titan's atmosphere—a molecule that could form stable membrane‑like structures (azotosomes) in liquid methane, hinting at the possibility of life with a completely different biochemistry.",
+      "category": "Robotic Explorers",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "NASA scientists have definitively detected acrylonitrile (vinyl cyanide) in Titan's atmosphere. Under Titan's conditions, this chemical is thought to be capable of forming stable, flexible structures similar to cell membranes.",
+          "source": "NASA Titan Vinyl Cyanide",
+          "url": "https://science.nasa.gov/missions/cassini/nasa-finds-moon-of-saturn-has-chemical-that-could-form-membranes/",
+          "lines": "4-10"
+        }
+      ]
+    },
+    {
+      "id": "robotic_triton_capture",
+      "title": "Triton: A Captured Kuiper Belt Object",
+      "description": "Study New Horizons and ground‑based observations that show Triton's youthful surface and cryovolcanism, supporting the hypothesis that it is a captured Kuiper Belt Object, possibly once a binary partner of Pluto.",
+      "category": "Robotic Explorers",
+      "difficulty": "Advanced",
+      "citations": []
+    },
+    {
+      "id": "atmospheric_diamond_rain",
+      "title": "Diamond Rain on Ice Giants",
+      "description": "Probe the extreme interiors of Neptune and Uranus where high pressure crushes methane into diamonds that precipitate downward, releasing heat that helps drive supersonic winds and influence magnetic fields.",
+      "category": "Atmospheric & Deep‑Space Phenomena",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "A new experiment suggests that diamond rain forms at even lower pressures and temperatures than previously thought and could influence the unusual magnetic fields of Neptune and Uranus.",
+          "source": "SLAC Diamond Rain",
+          "url": "https://www6.slac.stanford.edu/news/2024-01-08-diamond-rain-icy-planets-offers-clues-magnetic-field-mysteries",
+          "lines": "4-12"
+        }
+      ]
+    },
+    {
+      "id": "atmospheric_supersonic_winds",
+      "title": "Neptune's Supersonic Winds",
+      "description": "Examine why Neptune, the farthest planet from the Sun, boasts the fastest winds in the solar system (up to 1,500 mph), powered largely by internal heat from formation and processes like diamond rain.",
+      "category": "Atmospheric & Deep‑Space Phenomena",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "Neptune is whipped by supersonic winds that can reach up 1,500 miles per hour.",
+          "source": "NASA Webb Ice Giants",
+          "url": "https://science.nasa.gov/missions/webb/examining-ice-giants-with-nasas-webb-telescope/",
+          "lines": "65-68"
+        },
+        {
+          "text": "The planet has a strong internal heat source. That heat source generates some of the most powerful winds.",
+          "source": "NASA Webb Ice Giants",
+          "url": "https://science.nasa.gov/missions/webb/examining-ice-giants-with-nasas-webb-telescope/",
+          "lines": "78-80"
+        }
+      ]
+    },
+    {
+      "id": "atmospheric_jwst_neptune",
+      "title": "JWST Detects Neptune's Cooling and Mid‑Latitude Auroras",
+      "description": "Analyze James Webb Space Telescope data that revealed a dramatic cooling of Neptune's upper atmosphere (halving since 1989) and captured the first clear images of auroras at mid‑latitudes, unlike Earth's polar auroras.",
+      "category": "Atmospheric & Deep‑Space Phenomena",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "Webb captured bright auroral activity on Neptune. The auroras are located at the planet's geographic mid‑latitudes, not confined to the poles.",
+          "source": "NASA Webb Neptune Auroras",
+          "url": "https://science.nasa.gov/missions/webb/nasas-webb-captures-neptunes-auroras-for-first-time/",
+          "lines": "7-11, 40-41"
+        },
+        {
+          "text": "Neptune's upper atmosphere has cooled by several hundreds of degrees. The temperature in 2023 was just over half of that in 1989.",
+          "source": "NASA Webb Neptune Auroras",
+          "url": "https://science.nasa.gov/missions/webb/nasas-webb-captures-neptunes-auroras-for-first-time/",
+          "lines": "52-54"
+        }
+      ]
+    },
+    {
+      "id": "life_panspermia_lhb",
+      "title": "Panspermia and the Late Heavy Bombardment",
+      "description": "Investigate the hypothesis that the Late Heavy Bombardment—a spike in impacts around 4 billion years ago—could have ejected Martian rocks containing early life (if it existed) and delivered them to Earth, seeding life here.",
+      "category": "Search for Life & Exoplanets",
+      "difficulty": "Advanced",
+      "citations": [
+        {
+          "text": "The Late Heavy Bombardment posits that a sudden change in the orbits of the giant planets threw the asteroid belt into disarray and sent leftover pieces crashing into the inner planets.",
+          "source": "NASA LHB",
+          "url": "https://science.nasa.gov/moon/lunar-craters/what-is-the-late-heavy-bombardment/",
+          "lines": "4-9"
+        }
+      ]
+    },
+    {
+      "id": "life_kepler_transit",
+      "title": "Kepler's Transit Method: A Census of Exoplanets",
+      "description": "Learn how the Kepler telescope revolutionized astronomy by monitoring stellar dimming caused by transiting planets, proving that Earth‑sized and super‑Earth worlds are common in the galaxy.",
+      "category": "Search for Life & Exoplanets",
+      "difficulty": "Advanced",
+      "citations": []
+    }
+  ]
+}
+
+{
+  "planets": [
+    {
+      "name": "Jupiter",
+      "features": [
+        {
+          "id": "fuzzy_core",
+          "description": "A diluted, partially dissolved core of rock, gas, and dissolved pebbles, revealed by Juno's gravity mapping.",
+          "citation": {
+            "text": "Juno discovers that Jupiter's core is large, fuzzy and dilute.",
+            "source": "Mission Juno",
+            "url": "https://www.missionjuno.swri.edu/science-findings/jupiters-dilute-core",
+            "lines": "2-4"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Saturn",
+      "features": [
+        {
+          "id": "vertical_rings",
+          "description": "Bending waves and vertical rifts in the rings, excited by moons on inclined orbits, creating walls of rubble up to miles high.",
+          "citation": {
+            "text": "The Cassini mission observed several bending waves in Saturn's rings that are resonantly excited by moons that move on orbits inclined relative to the ring plane.",
+            "source": "ELSI Seminar",
+            "url": "https://www.elsi.jp/en/news_events/events/2024/bending_waves_vertical_rif_saturns_rings/",
+            "lines": "7-10"
+          }
+        },
+        {
+          "id": "enceladus_plumes",
+          "description": "Geyser‑like jets of water vapor and ice particles erupting from a global subsurface ocean, detected by Cassini.",
+          "citation": {
+            "text": "Cassini discovered that geyser-like jets spew water vapor and ice particles from an underground ocean beneath the icy crust of Enceladus.",
+            "source": "NASA Enceladus",
+            "url": "https://science.nasa.gov/mission/cassini/science/enceladus/",
+            "lines": "9-12"
+          }
+        },
+        {
+          "id": "titan_vinyl_cyanide",
+          "description": "Vinyl cyanide (acrylonitrile) detected in the atmosphere, capable of forming membrane‑like structures in liquid methane.",
+          "citation": {
+            "text": "NASA scientists have definitively detected acrylonitrile (vinyl cyanide) in Titan's atmosphere... capable of forming stable, flexible structures similar to cell membranes.",
+            "source": "NASA Titan Vinyl Cyanide",
+            "url": "https://science.nasa.gov/missions/cassini/nasa-finds-moon-of-saturn-has-chemical-that-could-form-membranes/",
+            "lines": "4-10"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Neptune",
+      "features": [
+        {
+          "id": "diamond_rain",
+          "description": "Diamond precipitation from methane deep in the interior, releasing heat that influences magnetic fields and weather.",
+          "citation": {
+            "text": "Diamond rain forms at even lower pressures and temperatures than previously thought and could influence the unusual magnetic fields of Neptune and Uranus.",
+            "source": "SLAC Diamond Rain",
+            "url": "https://www6.slac.stanford.edu/news/2024-01-08-diamond-rain-icy-planets-offers-clues-magnetic-field-mysteries",
+            "lines": "4-12"
+          }
+        },
+        {
+          "id": "supersonic_winds",
+          "description": "Winds up to 1,500 mph, the fastest in the solar system, driven by internal heat.",
+          "citation": {
+            "text": "Neptune is whipped by supersonic winds that can reach up 1,500 miles per hour.",
+            "source": "NASA Webb Ice Giants",
+            "url": "https://science.nasa.gov/missions/webb/examining-ice-giants-with-nasas-webb-telescope/",
+            "lines": "65-68"
+          }
+        },
+        {
+          "id": "jwst_auroras_cooling",
+          "description": "JWST detected mid‑latitude auroras and a dramatic cooling of the upper atmosphere (halving since 1989).",
+          "citation": {
+            "text": "Webb captured bright auroral activity on Neptune... located at mid‑latitudes. Neptune's upper atmosphere has cooled by several hundreds of degrees.",
+            "source": "NASA Webb Neptune Auroras",
+            "url": "https://science.nasa.gov/missions/webb/nasas-webb-captures-neptunes-auroras-for-first-time/",
+            "lines": "7-11, 40-41, 52-54"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mercury",
+      "features": [
+        {
+          "id": "hit_run_impact",
+          "description": "A grazing, hit‑and‑run impact with a larger body likely stripped its mantle while preserving volatiles, as revealed by MESSENGER data.",
+          "citation": []
+        }
+      ]
+    },
+    {
+      "name": "Mars",
+      "features": [
+        {
+          "id": "panspermia_source",
+          "description": "Possible source of early life that could have been transported to Earth via ejecta during the Late Heavy Bombardment.",
+          "citation": []
+        }
+      ]
+    },
+    {
+      "name": "Triton",
+      "features": [
+        {
+          "id": "captured_kbo",
+          "description": "Geologically active moon with a young surface and cryovolcanism, believed to be a captured Kuiper Belt Object.",
+          "citation": []
+        }
+      ]
+    }
+  ]
+}
