@@ -1,0 +1,250 @@
+{
+  "teaching_platform": {
+    "name": "Shaolin Astronomy Classroom",
+    "purpose": "Deliver the Shaolin Astronomy curriculum interactively with adaptive lessons, assessments, and educator tools.",
+    "modules": [
+      "lesson_engine",
+      "assessment_engine",
+      "progress_tracking",
+      "teacher_console",
+      "student_portal",
+      "classroom_sessions",
+      "content_authoring",
+      "analytics_reporting"
+    ]
+  },
+  "lesson_engine": {
+    "description": "Runs interactive Chambers tying curriculum markdown to 3D scenes, questions, and tasks.",
+    "features": [
+      "Markdown-to-lesson parsing (from /curriculum/*.md)",
+      "Step-based lessons (explain → visualize → interact → reflect)",
+      "Contextual 3D focus (auto-focus planet/system in Explore view)",
+      "Embedded micro-activities (multiple choice, sliders, drag-and-drop mappings)",
+      "Mode switching: 'Science View', 'Culture View', 'Synergy View'"
+    ],
+    "data_model": {
+      "lesson_instance": {
+        "id": "string",
+        "lesson_id": "string",
+        "title": "string",
+        "chamber": "string",
+        "planet_ids": ["string"],
+        "steps": [
+          {
+            "id": "string",
+            "type": "content|question|activity|visualize",
+            "title": "string",
+            "markdown": "string",
+            "linked_planet_id": "string|null",
+            "requires_interaction": "boolean",
+            "metadata": {
+              "estimated_minutes": "number",
+              "difficulty": "number"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "assessment_engine": {
+    "description": "Handles questions, scoring, feedback, and mastery checks.",
+    "question_types": [
+      "multiple_choice",
+      "true_false",
+      "short_text_reflection",
+      "planet_member_matching",
+      "sequence_ordering",
+      "scenario_choice"
+    ],
+    "features": [
+      "Auto-graded questions (MCQ, T/F, matching)",
+      "Rubric-tagged reflections for teacher review",
+      "Planet-science ↔ Wu-member mapping challenges",
+      "Scenario questions about systems and synergy (what happens if one planet/member changes?)",
+      "Immediate feedback with hints referencing Chambers"
+    ],
+    "data_model": {
+      "question": {
+        "id": "string",
+        "lesson_id": "string",
+        "type": "string",
+        "prompt": "string",
+        "options": ["string"],
+        "correct_option_index": "number|null",
+        "explanation": "string",
+        "tags": ["science", "culture", "systems", "math"],
+        "rubric": {
+          "dimensions": [
+            {
+              "name": "conceptual_understanding",
+              "scale": 4,
+              "descriptor": "Shows grasp of concept and connection between science and culture."
+            }
+          ]
+        }
+      },
+      "submission": {
+        "id": "string",
+        "user_id": "string",
+        "question_id": "string",
+        "answer": "string|object",
+        "score": "number|null",
+        "feedback": "string|null",
+        "timestamp": "string"
+      }
+    }
+  },
+  "progress_tracking": {
+    "description": "Tracks what each learner has done, mastered, and unlocked.",
+    "features": [
+      "Per-lesson completion state (not started / in progress / completed)",
+      "Per-Chamber mastery levels (0–3 stars)",
+      "Skill tagging (gravity, planetary traits, systems thinking, cultural analysis)",
+      "Synergy profile per learner (strength in individual vs. integration vs. coherence)",
+      "Unlockables (visual skins, extra Chambers, advanced scenarios)"
+    ],
+    "data_model": {
+      "user_profile": {
+        "id": "string",
+        "role": "student|teacher|guest",
+        "display_name": "string",
+        "class_ids": ["string"]
+      },
+      "user_progress": {
+        "user_id": "string",
+        "lesson_status": [
+          {
+            "lesson_id": "string",
+            "status": "not_started|in_progress|completed",
+            "last_step_index": "number",
+            "score": "number|null"
+          }
+        ],
+        "skills": {
+          "gravity_understanding": "number",
+          "planetary_science": "number",
+          "cultural_context": "number",
+          "systems_thinking": "number"
+        },
+        "synergy_profile": {
+          "individual_strength": "number",
+          "system_integration": "number",
+          "gravitational_coherence": "number"
+        }
+      }
+    }
+  },
+  "teacher_console": {
+    "description": "Tools for educators to deploy, monitor, and adapt the curriculum.",
+    "features": [
+      "Create and manage classes",
+      "Assign Chambers/lessons to classes with due dates",
+      "See per-student and per-class dashboards",
+      "View common misconceptions and tough questions",
+      "Clone/edit lessons and questions via GUI (content authoring light)",
+      "Export progress and anonymized analytics (CSV/JSON)"
+    ],
+    "views": [
+      "Class overview (roster, average mastery per Chamber)",
+      "Lesson analytics (per-question performance, common wrong answers)",
+      "Student detail (timeline of activity, strengths/weaknesses)"
+    ]
+  },
+  "student_portal": {
+    "description": "Student-facing experience layered on top of the interactive frontend.",
+    "features": [
+      "Personal dashboard (current Chamber, next recommended lesson)",
+      "XP/level system tied to completed lessons and challenges",
+      "Badges for Chambers (e.g., 'Gravity Disciple', 'Outer Planet Sage')",
+      "Suggested path: science-first, culture-first, or balanced track",
+      "Reflection journal saved per learner"
+    ],
+    "data_model": {
+      "badge": {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "criteria": "string"
+      },
+      "journal_entry": {
+        "id": "string",
+        "user_id": "string",
+        "lesson_id": "string",
+        "content": "string",
+        "created_at": "string"
+      }
+    }
+  },
+  "classroom_sessions": {
+    "description": "Live or semi-live modes for classroom use.",
+    "features": [
+      "Teacher-led session mode (teacher picks planet/Chamber, all student UIs follow)",
+      "Quick polls during lessons (MCQ on planetary facts or Wu-history)",
+      "Live heatmap: which options students pick for a given question (anonymized)",
+      "Shared 'Synergy Bar' that rises as the class answers correctly or reflects deeply",
+      "Projector-friendly 'Chamber View' with minimal chrome and large text"
+    ],
+    "realtime_transport": "WebSockets or WebRTC (optional, can be added as separate service)"
+  },
+  "content_authoring": {
+    "description": "Let educators and contributors extend Chambers without deep coding.",
+    "features": [
+      "Web-based editor for new lessons bound to planets and Chambers",
+      "Markdown with front-matter to define planet_ids, tags, estimated time",
+      "Inline question builder (MCQ, matching, scenario) linked to assessment_engine",
+      "Preview mode that renders lesson exactly as students see it",
+      "Versioning and diff view (integrates with Git via PRs in the repo workflow)"
+    ],
+    "lesson_front_matter_example": {
+      "yaml": {
+        "id": "chamber2-lesson-mars-ghostface",
+        "title": "Mars & Ironman: Vulnerability as Atmospheric Loss",
+        "planets": ["mars"],
+        "skills": ["planetary_science", "cultural_context", "systems_thinking"],
+        "estimated_minutes": 30,
+        "difficulty": 2
+      }
+    }
+  },
+  "analytics_reporting": {
+    "description": "Summarizes how well the curriculum teaches systems thinking and astronomy.",
+    "features": [
+      "Per-skill improvement over time (pre/post lesson comparisons)",
+      "Which Chambers most strongly boost systems thinking metrics",
+      "Distribution of synergy_profiles across students",
+      "Export anonymized analytics for research on interdisciplinary teaching"
+    ],
+    "privacy": {
+      "pseudonymization": true,
+      "opt_in_required_for_research": true
+    }
+  },
+  "integration_with_frontend": {
+    "description": "How teaching modules talk to the existing interactive UI.",
+    "hooks": [
+      {
+        "name": "onLessonStepChanged",
+        "trigger": "LessonEngine moves to a new step with linked_planet_id",
+        "effect": "SolarSystem focuses that planet and highlights its orbit."
+      },
+      {
+        "name": "onQuestionAnswered",
+        "trigger": "AssessmentEngine records a submission",
+        "effect": "ProgressTracking updates skills and SynergyMeter animates changes."
+      },
+      {
+        "name": "onChamberCompleted",
+        "trigger": "All core lessons in a Chamber are completed",
+        "effect": "StudentPortal unlocks a new badge and suggests next Chamber."
+      }
+    ]
+  },
+  "persistence": {
+    "description": "How data is stored (flexible, repo-agnostic).",
+    "support": [
+      "Local mode: browser localStorage / IndexedDB for solo learners",
+      "Server mode: REST/GraphQL API for multi-user classrooms",
+      "Config flag in frontend to switch between modes"
+    ]
+  }
+}
