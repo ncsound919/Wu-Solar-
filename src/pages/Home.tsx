@@ -77,9 +77,9 @@ function Home() {
                 <h3>{module.title}</h3>
                 <p className="module-subtitle">{module.subtitle}</p>
                 <p className="module-description">{module.description}</p>
-                <button className="module-button">
+                <span className="module-button">
                   Enter Chamber →
-                </button>
+                </span>
               </Link>
             ))}
           </div>
