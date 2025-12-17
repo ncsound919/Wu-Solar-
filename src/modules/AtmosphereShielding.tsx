@@ -32,12 +32,18 @@ function AtmosphereShielding() {
 
   const calculateVenusBrightness = () => {
     const { charisma, mystique, visibility } = venusState
-    return Math.min(100, (charisma + mystique + visibility) / 3)
+    const factors = [charisma, mystique, visibility]
+    const average = factors.reduce((sum, val) => sum + val, 0) / factors.length
+    return Math.min(100, average)
   }
 
   const calculateGreenhouseEffect = () => {
     const { charisma, mystique, heatRetention } = venusState
-    return Math.min(100, (charisma * 0.4 + mystique * 0.3 + heatRetention * 0.3))
+    // Weighted average: charisma 40%, mystique 30%, heat retention 30%
+    const CHARISMA_WEIGHT = 0.4
+    const MYSTIQUE_WEIGHT = 0.3
+    const HEAT_WEIGHT = 0.3
+    return Math.min(100, (charisma * CHARISMA_WEIGHT + mystique * MYSTIQUE_WEIGHT + heatRetention * HEAT_WEIGHT))
   }
 
   const calculateMarsScars = () => {

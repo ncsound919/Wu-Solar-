@@ -53,7 +53,9 @@ My style is wild, there ain't no doubt`
     const density = Math.min(100, (uniqueWords / wordCount) * 200)
     const ironCore = Math.min(100, avgWordLength * 15)
     const atmosphere = 100 - density
-    const chaos = Math.min(100, Math.random() * 50 + (100 - density))
+    // Chaos based on repetition and structure (deterministic)
+    const repetitionRatio = wordCount > 0 ? (wordCount - uniqueWords) / wordCount : 0
+    const chaos = Math.min(100, (atmosphere * 0.6) + (repetitionRatio * 100 * 0.4))
 
     return {
       density,

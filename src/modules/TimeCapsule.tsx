@@ -13,6 +13,7 @@ interface ArchiveItem {
 
 const GAME_DURATION = 60 // seconds
 const FLOOD_DELAY = 5 // seconds before flood starts rising
+const FLOOD_RISE_RATE = 100 / (GAME_DURATION - FLOOD_DELAY) // percentage per second
 
 function TimeCapsule() {
   const [gameActive, setGameActive] = useState(false)
@@ -142,7 +143,7 @@ function TimeCapsule() {
         
         // Flood starts rising after delay
         if (timeRemaining < (GAME_DURATION - FLOOD_DELAY)) {
-          setFloodLevel(prev => Math.min(100, prev + (100 / (GAME_DURATION - FLOOD_DELAY))))
+          setFloodLevel(prev => Math.min(100, prev + FLOOD_RISE_RATE))
         }
       }, 1000)
     } else if (timeRemaining === 0 && gameActive) {
