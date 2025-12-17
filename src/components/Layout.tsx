@@ -48,7 +48,7 @@ function Layout({ children }: LayoutProps) {
       <footer className="footer">
         <div className="container">
           <p className="footer-text">
-            Wu-Tang Solar System © 2024 | Teaching Systems Thinking through Shaolin Astronomy
+            Wu-Tang Solar System © {new Date().getFullYear()} | Teaching Systems Thinking through Shaolin Astronomy
           </p>
           <p className="footer-subtitle">
             "Synergy = (Individual Strength) × (System Integration) × (Gravitational Coherence)"
