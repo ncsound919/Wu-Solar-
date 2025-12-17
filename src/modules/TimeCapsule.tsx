@@ -155,7 +155,7 @@ function TimeCapsule() {
         clearTimeout(timerRef.current)
       }
     }
-  }, [gameActive, timeRemaining, gameOver])
+  }, [gameActive, timeRemaining, gameOver, endGame])
 
   const startGame = () => {
     setGameActive(true)
