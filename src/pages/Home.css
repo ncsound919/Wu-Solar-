@@ -1,0 +1,157 @@
+.hero {
+  background: linear-gradient(135deg, rgba(253, 184, 19, 0.1) 0%, rgba(10, 10, 15, 1) 100%);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.hero-formula {
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.hero-formula h3 {
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.formula {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: 'Courier New', monospace;
+}
+
+.modules {
+  padding: 4rem 0;
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.module-card {
+  border-top: 4px solid;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.module-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.module-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.module-description {
+  color: var(--color-text-secondary);
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.module-button {
+  margin-top: auto;
+  width: 100%;
+}
+
+.philosophy {
+  background: var(--color-bg-secondary);
+  padding: 4rem 0;
+  margin-top: 4rem;
+}
+
+.philosophy-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.philosophy-content p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+}
+
+.philosophy-questions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.question-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.question-card h3 {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.question-card p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.philosophy-conclusion {
+  margin-top: 2rem;
+  font-size: 1.2rem !important;
+  color: var(--color-text) !important;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-questions {
+    grid-template-columns: 1fr;
+  }
+}

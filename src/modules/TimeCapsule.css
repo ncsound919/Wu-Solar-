@@ -1,0 +1,349 @@
+.time-capsule {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.story-section {
+  background: linear-gradient(135deg, rgba(65, 105, 225, 0.1) 0%, var(--color-bg-secondary) 100%);
+  border: 1px solid #4169E1;
+  margin-bottom: 2rem;
+}
+
+.story-section h2 {
+  color: #4169E1;
+  margin-bottom: 1rem;
+}
+
+.story-section p {
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.story-section strong {
+  color: var(--color-accent);
+}
+
+.story-section em {
+  color: #4169E1;
+}
+
+.start-panel {
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(253, 184, 19, 0.1) 0%, var(--color-bg-secondary) 100%);
+}
+
+.start-panel h2 {
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.start-panel p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.start-button {
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+}
+
+.game-panel {
+  margin-bottom: 2rem;
+}
+
+.game-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-item {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.flood-indicator {
+  background: var(--color-bg-secondary);
+  border: 2px solid #4169E1;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.flood-bar {
+  flex: 1;
+  height: 60px;
+  background: var(--color-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid var(--color-border);
+}
+
+.flood-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: height 0.5s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.flood-fill::before {
+  content: "💧";
+  font-size: 1.5rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.flood-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  min-width: 150px;
+}
+
+.archives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.archive-item {
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.archive-item.saved {
+  border-color: #44ff44;
+}
+
+.item-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.item-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.item-year {
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.item-description {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.item-priority {
+  color: #FDB813;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.save-button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.saved-badge {
+  background: #44ff44;
+  color: #000;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: auto;
+}
+
+.results-panel {
+  background: linear-gradient(135deg, rgba(253, 184, 19, 0.1) 0%, var(--color-bg-secondary) 100%);
+  border: 2px solid var(--color-accent);
+  text-align: center;
+}
+
+.results-panel h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.results-message {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.results-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: var(--color-bg);
+  border-radius: 12px;
+}
+
+.result-stat {
+  text-align: center;
+}
+
+.result-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.saved-items, .lost-items {
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--color-bg);
+  border-radius: 12px;
+}
+
+.saved-items h3 {
+  color: #44ff44;
+  margin-bottom: 1rem;
+}
+
+.lost-items h3 {
+  color: #ff4444;
+  margin-bottom: 1rem;
+}
+
+.saved-items ul, .lost-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.saved-items li, .lost-items li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.saved-items li:last-child, .lost-items li:last-child {
+  border-bottom: none;
+}
+
+.retry-button {
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+}
+
+.lesson-section {
+  background: linear-gradient(135deg, rgba(253, 184, 19, 0.1) 0%, var(--color-bg-secondary) 100%);
+  border: 1px solid var(--color-accent);
+}
+
+.lesson-section h2 {
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.lesson-content h3 {
+  color: #4169E1;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.lesson-content p {
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.lesson-content strong {
+  color: var(--color-accent);
+}
+
+.lesson-content ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.lesson-content li {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .game-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .results-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .archives-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .flood-indicator {
+    flex-direction: column;
+  }
+
+  .flood-bar {
+    width: 100%;
+  }
+}
