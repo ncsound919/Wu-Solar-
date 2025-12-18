@@ -43,7 +43,8 @@ function Quiz({ moduleName, questions, onComplete, previousScore }: QuizProps) {
       setSelectedAnswer(null)
       setShowExplanation(false)
     } else {
-      const finalScore = Math.round(((correctAnswers + (selectedAnswer === questions[currentQuestion].correctIndex ? 1 : 0)) / questions.length) * 100)
+      // correctAnswers already includes the last question (updated in handleSubmit)
+      const finalScore = Math.round((correctAnswers / questions.length) * 100)
       setIsComplete(true)
       onComplete(finalScore)
     }
