@@ -265,10 +265,10 @@ The goal is education. Complex code must be documented simply so students can le
 - [x] Responsive design
 
 ### Future Enhancements
-- [ ] Progress tracking with localStorage
-- [ ] Quiz system for each module
-- [ ] Field trip guides for outdoor activities
-- [ ] Album study guides integration
+- [x] Progress tracking with localStorage
+- [x] Quiz system for each module
+- [x] Field trip guides for outdoor activities
+- [x] Album study guides integration
 - [ ] Multiplayer classroom mode
 - [ ] Mobile app version
 - [ ] VR experience

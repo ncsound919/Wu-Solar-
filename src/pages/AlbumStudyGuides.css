@@ -1,0 +1,198 @@
+.album-study-guides {
+  padding-bottom: 4rem;
+}
+
+.intro-section {
+  margin-bottom: 3rem;
+}
+
+.intro-section h2 {
+  margin-bottom: 1rem;
+}
+
+.intro-section > p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section ul {
+  padding-left: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.intro-section li {
+  margin-bottom: 0.5rem;
+}
+
+.albums-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.album-card {
+  border-left: 4px solid;
+  padding: 2rem;
+}
+
+.album-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.album-cover {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.album-info h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.album-artist {
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.album-planet {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.album-description {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--color-bg);
+  border-radius: 8px;
+}
+
+.album-description p {
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.album-section {
+  margin-bottom: 1.5rem;
+}
+
+.album-section h3 {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.album-section ul,
+.album-section ol {
+  padding-left: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.album-section li {
+  margin-bottom: 0.5rem;
+}
+
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.track-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg);
+  border-radius: 6px;
+}
+
+.track-title {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.track-lesson {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.teaching-tips {
+  margin-bottom: 2rem;
+}
+
+.teaching-tips h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tips-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tip-column {
+  background: var(--color-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.tip-column h3 {
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.tip-column ul {
+  padding-left: 1.25rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.tip-column li {
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer {
+  background: rgba(255, 170, 0, 0.1);
+  border-color: #ffaa00;
+}
+
+.disclaimer h2 {
+  color: #ffaa00;
+  margin-bottom: 1rem;
+}
+
+.disclaimer p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .album-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .album-card {
+    padding: 1.5rem;
+  }
+
+  .tips-content {
+    grid-template-columns: 1fr;
+  }
+}

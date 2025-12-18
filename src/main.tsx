@@ -4,9 +4,12 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './styles/globals.css'
 
+// Get base URL from vite or default to root
+const basename = import.meta.env.BASE_URL || '/'
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,

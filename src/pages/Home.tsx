@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ProgressDashboard from '../components/ProgressDashboard'
 import './Home.css'
 
 function Home() {
@@ -37,6 +38,23 @@ function Home() {
     }
   ]
 
+  const resources = [
+    {
+      path: '/field-trips',
+      title: 'Field Trip Guides',
+      description: 'Take learning outdoors with guided activities that connect planetary science to real-world locations.',
+      icon: '🎒',
+      color: '#44ff44'
+    },
+    {
+      path: '/album-guides',
+      title: 'Album Study Guides',
+      description: 'Deep dives into classic Wu-Tang albums with scientific connections to planetary concepts.',
+      icon: '💿',
+      color: '#ff6b6b'
+    }
+  ]
+
   return (
     <div className="home">
       <section className="hero">
@@ -60,6 +78,12 @@ function Home() {
         </div>
       </section>
 
+      <section className="progress-section">
+        <div className="container">
+          <ProgressDashboard />
+        </div>
+      </section>
+
       <section className="modules">
         <div className="container">
           <h2 className="text-center mb-4">The Four Chambers</h2>
@@ -80,6 +104,31 @@ function Home() {
                 <span className="module-button">
                   Enter Chamber →
                 </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="resources">
+        <div className="container">
+          <h2 className="text-center mb-4">📚 Educational Resources</h2>
+          <div className="resources-grid">
+            {resources.map((resource) => (
+              <Link
+                key={resource.path}
+                to={resource.path}
+                className="resource-card card"
+                style={{ borderLeftColor: resource.color }}
+              >
+                <div className="resource-icon" style={{ color: resource.color }}>
+                  {resource.icon}
+                </div>
+                <div className="resource-content">
+                  <h3>{resource.title}</h3>
+                  <p>{resource.description}</p>
+                </div>
+                <span className="resource-arrow">→</span>
               </Link>
             ))}
           </div>

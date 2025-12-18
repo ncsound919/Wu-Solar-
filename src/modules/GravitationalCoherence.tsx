@@ -1,8 +1,11 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
 import * as THREE from 'three'
 import planetsData from '../data/planets.json'
+import Quiz from '../components/Quiz'
+import { gravitationalCoherenceQuiz } from '../data/quizData'
+import { useProgress } from '../hooks/useProgress'
 import './GravitationalCoherence.css'
 
 interface PlanetProps {
@@ -79,6 +82,19 @@ function SolarSystem({ gravityStrength }: { gravityStrength: number }) {
 function GravitationalCoherence() {
   const [gravityStrength, setGravityStrength] = useState(1.0)
   const [selectedPlanet, setSelectedPlanet] = useState(planetsData[0])
+  const [showQuiz, setShowQuiz] = useState(false)
+  const { markModuleVisited, saveQuizScore, getModuleProgress } = useProgress()
+  
+  const moduleId = 'gravitational-coherence'
+  const moduleProgress = getModuleProgress(moduleId)
+
+  useEffect(() => {
+    markModuleVisited(moduleId)
+  }, [markModuleVisited])
+
+  const handleQuizComplete = (score: number) => {
+    saveQuizScore(moduleId, score)
+  }
 
   const getSystemStatus = () => {
     if (gravityStrength < 0.3) return { status: 'COLLAPSED', color: '#ff4444', message: 'System has collapsed! Members drift into the void.' }
@@ -205,6 +221,28 @@ function GravitationalCoherence() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="quiz-section">
+          {!showQuiz ? (
+            <button 
+              onClick={() => setShowQuiz(true)} 
+              className="quiz-button"
+            >
+              {moduleProgress.quizCompleted ? '📝 Retake Quiz' : '📝 Take Quiz'}
+              {moduleProgress.quizScore !== null && (
+                <span className="previous-score"> (Best: {moduleProgress.quizScore}%)</span>
+              )}
+            </button>
+          ) : (
+            <Quiz
+              moduleId={moduleId}
+              moduleName="Gravitational Coherence"
+              questions={gravitationalCoherenceQuiz}
+              onComplete={handleQuizComplete}
+              previousScore={moduleProgress.quizScore}
+            />
+          )}
         </div>
       </div>
     </div>

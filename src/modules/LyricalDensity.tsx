@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Quiz from '../components/Quiz'
+import { lyricalDensityQuiz } from '../data/quizData'
+import { useProgress } from '../hooks/useProgress'
 import './LyricalDensity.css'
 
 interface AnalysisResult {
@@ -16,6 +19,19 @@ function LyricalDensity() {
   const [mode, setMode] = useState<'mercury' | 'neptune'>('mercury')
   const [inputText, setInputText] = useState('')
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null)
+  const [showQuiz, setShowQuiz] = useState(false)
+  const { markModuleVisited, saveQuizScore, getModuleProgress } = useProgress()
+  
+  const moduleId = 'lyrical-density'
+  const moduleProgress = getModuleProgress(moduleId)
+
+  useEffect(() => {
+    markModuleVisited(moduleId)
+  }, [markModuleVisited])
+
+  const handleQuizComplete = (score: number) => {
+    saveQuizScore(moduleId, score)
+  }
 
   const exampleTexts = {
     mercury: `I'm on a mission, that niggas say is impossible
@@ -326,6 +342,28 @@ My style is wild, there ain't no doubt`
             per word) versus "atmospheric" creativity (high energy and chaos). Both styles have value in
             different contexts.
           </p>
+        </div>
+
+        <div className="quiz-section">
+          {!showQuiz ? (
+            <button 
+              onClick={() => setShowQuiz(true)} 
+              className="quiz-button"
+            >
+              {moduleProgress.quizCompleted ? '📝 Retake Quiz' : '📝 Take Quiz'}
+              {moduleProgress.quizScore !== null && (
+                <span className="previous-score"> (Best: {moduleProgress.quizScore}%)</span>
+              )}
+            </button>
+          ) : (
+            <Quiz
+              moduleId={moduleId}
+              moduleName="Lyrical Density"
+              questions={lyricalDensityQuiz}
+              onComplete={handleQuizComplete}
+              previousScore={moduleProgress.quizScore}
+            />
+          )}
         </div>
       </div>
     </div>

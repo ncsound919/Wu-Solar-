@@ -1,0 +1,173 @@
+.progress-dashboard {
+  margin-bottom: 3rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+}
+
+.reset-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.reset-button:hover {
+  background: rgba(255, 68, 68, 0.1);
+  border-color: #ff4444;
+  color: #ff4444;
+  box-shadow: none;
+}
+
+.overall-progress {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.progress-circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.progress-circle svg {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.progress-text .percentage {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+.progress-text .label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.progress-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.modules-progress h3 {
+  margin-bottom: 1rem;
+}
+
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.module-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-bg);
+  border-radius: 8px;
+}
+
+.module-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.module-icon {
+  font-size: 1.5rem;
+}
+
+.module-name {
+  font-weight: 500;
+}
+
+.module-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-complete {
+  color: #44ff44;
+  font-weight: 600;
+}
+
+.status-visited {
+  color: #ffaa00;
+}
+
+.status-not-started {
+  color: var(--color-text-secondary);
+}
+
+.quiz-score {
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  background: rgba(253, 184, 19, 0.1);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .overall-progress {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .progress-stats {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .module-item {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .module-info {
+    flex-direction: column;
+  }
+}
