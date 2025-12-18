@@ -1,4 +1,4 @@
-# Wu-Tang Solar System 🌟
+# Wu-Solar - Wu Tang Solar System Curriculum 
 
 <div align="center">
 
