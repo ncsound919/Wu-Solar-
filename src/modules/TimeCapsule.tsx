@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
+import Quiz from '../components/Quiz'
+import { timeCapsuleQuiz } from '../data/quizData'
+import { useProgress } from '../hooks/useProgress'
 import './TimeCapsule.css'
 
 interface ArchiveItem {
@@ -21,7 +24,20 @@ function TimeCapsule() {
   const [floodLevel, setFloodLevel] = useState(0)
   const [score, setScore] = useState(0)
   const [gameOver, setGameOver] = useState(false)
+  const [showQuiz, setShowQuiz] = useState(false)
   const timerRef = useRef<number | null>(null)
+  const { markModuleVisited, saveQuizScore, getModuleProgress } = useProgress()
+  
+  const moduleId = 'time-capsule'
+  const moduleProgress = getModuleProgress(moduleId)
+
+  useEffect(() => {
+    markModuleVisited(moduleId)
+  }, [markModuleVisited, moduleId])
+
+  const handleQuizComplete = (quizScore: number) => {
+    saveQuizScore(moduleId, quizScore)
+  }
 
   const [archives] = useState<ArchiveItem[]>([
     {
@@ -136,6 +152,11 @@ function TimeCapsule() {
 
   const [items, setItems] = useState(archives)
 
+  const endGame = () => {
+    setGameActive(false)
+    setGameOver(true)
+  }
+
   useEffect(() => {
     if (gameActive && timeRemaining > 0 && !gameOver) {
       timerRef.current = window.setTimeout(() => {
@@ -155,7 +176,7 @@ function TimeCapsule() {
         clearTimeout(timerRef.current)
       }
     }
-  }, [gameActive, timeRemaining, gameOver, endGame])
+  }, [gameActive, timeRemaining, gameOver])
 
   const startGame = () => {
     setGameActive(true)
@@ -176,11 +197,6 @@ function TimeCapsule() {
       i.id === id ? { ...i, saved: true } : i
     ))
     setScore(prev => prev + item.priority * 100)
-  }
-
-  const endGame = () => {
-    setGameActive(false)
-    setGameOver(true)
   }
 
   const savedCount = items.filter(i => i.saved).length
@@ -404,6 +420,27 @@ function TimeCapsule() {
               techniques (burying artifacts) with modern technology (digital archives).
             </p>
           </div>
+        </div>
+
+        <div className="quiz-section">
+          {!showQuiz ? (
+            <button 
+              onClick={() => setShowQuiz(true)} 
+              className="quiz-button"
+            >
+              {moduleProgress.quizCompleted ? '📝 Retake Quiz' : '📝 Take Quiz'}
+              {moduleProgress.quizScore !== null && (
+                <span className="previous-score"> (Best: {moduleProgress.quizScore}%)</span>
+              )}
+            </button>
+          ) : (
+            <Quiz
+              moduleName="Time Capsule"
+              questions={timeCapsuleQuiz}
+              onComplete={handleQuizComplete}
+              previousScore={moduleProgress.quizScore}
+            />
+          )}
         </div>
       </div>
     </div>

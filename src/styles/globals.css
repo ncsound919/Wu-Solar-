@@ -208,3 +208,22 @@ button:disabled {
     transform: rotate(360deg);
   }
 }
+
+/* Quiz Section Styles (shared across modules) */
+.quiz-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.quiz-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quiz-button .previous-score {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

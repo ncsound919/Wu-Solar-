@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import Quiz from '../components/Quiz'
+import { atmosphereShieldingQuiz } from '../data/quizData'
+import { useProgress } from '../hooks/useProgress'
 import './AtmosphereShielding.css'
 
 interface BuilderState {
@@ -29,6 +32,19 @@ function AtmosphereShielding() {
     storytelling: 85,
     volatility: 60
   })
+  const [showQuiz, setShowQuiz] = useState(false)
+  const { markModuleVisited, saveQuizScore, getModuleProgress } = useProgress()
+  
+  const moduleId = 'atmosphere-shielding'
+  const moduleProgress = getModuleProgress(moduleId)
+
+  useEffect(() => {
+    markModuleVisited(moduleId)
+  }, [markModuleVisited, moduleId])
+
+  const handleQuizComplete = (score: number) => {
+    saveQuizScore(moduleId, score)
+  }
 
   const calculateVenusBrightness = () => {
     const { charisma, mystique, visibility } = venusState
@@ -379,6 +395,27 @@ function AtmosphereShielding() {
             that amplify presence, while Mars embraces exposure for authentic storytelling. Choose
             your approach based on your goals and context.
           </p>
+        </div>
+
+        <div className="quiz-section">
+          {!showQuiz ? (
+            <button 
+              onClick={() => setShowQuiz(true)} 
+              className="quiz-button"
+            >
+              {moduleProgress.quizCompleted ? '📝 Retake Quiz' : '📝 Take Quiz'}
+              {moduleProgress.quizScore !== null && (
+                <span className="previous-score"> (Best: {moduleProgress.quizScore}%)</span>
+              )}
+            </button>
+          ) : (
+            <Quiz
+              moduleName="Atmosphere & Shielding"
+              questions={atmosphereShieldingQuiz}
+              onComplete={handleQuizComplete}
+              previousScore={moduleProgress.quizScore}
+            />
+          )}
         </div>
       </div>
     </div>
