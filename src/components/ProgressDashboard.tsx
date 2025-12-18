@@ -78,7 +78,7 @@ function ProgressDashboard() {
           </div>
           <div className="stat">
             <span className="stat-value">{progress.totalScore}</span>
-            <span className="stat-label">Total Quiz Score</span>
+            <span className="stat-label">Total Points Earned</span>
           </div>
         </div>
       </div>
