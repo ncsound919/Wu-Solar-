@@ -1,0 +1,332 @@
+[
+  {
+    "id": "sun",
+    "name": "The Sun",
+    "member": "RZA",
+    "aliases": ["The Abbot", "Bobby Digital", "Prince Rakeem"],
+    "order": 0,
+    "type": "star",
+    "scientificTraits": {
+      "composition": "Hydrogen & Helium plasma",
+      "atmosphere": "Corona - solar winds",
+      "keyFeatures": [
+        "Contains 99.8% of solar system mass",
+        "Provides gravitational coherence",
+        "Energy source for all life"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Visionary producer and architect",
+      "role": "Center of Gravity - holds the Clan together",
+      "lessonFocus": "Leadership & Gravitational Coherence",
+      "conceptBlurbs": [
+        "The mastermind behind Wu-Tang's 36 Chambers",
+        "Production style sets the gravitational pull that keeps members in orbit",
+        "Without his vision, the chaotic talents would drift apart"
+      ]
+    },
+    "visual": {
+      "color": "#FDB813",
+      "radius": 3.0,
+      "orbitRadius": 0,
+      "orbitSpeed": 0
+    }
+  },
+  {
+    "id": "mercury",
+    "name": "Mercury",
+    "member": "GZA",
+    "aliases": ["The Genius", "Maximillion"],
+    "order": 1,
+    "type": "rocky",
+    "scientificTraits": {
+      "composition": "Iron core - extremely dense",
+      "atmosphere": "Virtually none - stripped away",
+      "keyFeatures": [
+        "Closest to the Sun",
+        "Massive iron core (75% of planet)",
+        "Dense, compact, no filler"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Dense, scientific, intellectual",
+      "role": "The Genius - spiritual head",
+      "lessonFocus": "Density vs Atmosphere - Iron Core Lyrics",
+      "conceptBlurbs": [
+        "Liquid Swords represents pure lyrical density",
+        "Like Mercury's iron core, GZA's lyrics are stripped of excess",
+        "Scientific precision in every bar"
+      ]
+    },
+    "visual": {
+      "color": "#8C7853",
+      "radius": 0.4,
+      "orbitRadius": 8,
+      "orbitSpeed": 0.02
+    }
+  },
+  {
+    "id": "venus",
+    "name": "Venus",
+    "member": "Method Man",
+    "aliases": ["Johnny Blaze", "Tical", "Methical"],
+    "order": 2,
+    "type": "rocky",
+    "scientificTraits": {
+      "composition": "Rocky with thick CO2 atmosphere",
+      "atmosphere": "Extreme greenhouse effect - traps heat",
+      "keyFeatures": [
+        "Brightest object in night sky",
+        "Hottest planet (greenhouse effect)",
+        "Dense cloud coverage"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Charismatic star power",
+      "role": "The Star - mainstream bridge",
+      "lessonFocus": "Atmosphere & Brand Building",
+      "conceptBlurbs": [
+        "Like Venus, the brightest and most visible",
+        "Charisma creates a greenhouse effect that traps attention",
+        "Cloudy Tical persona builds mystique"
+      ]
+    },
+    "visual": {
+      "color": "#FFC649",
+      "radius": 0.9,
+      "orbitRadius": 12,
+      "orbitSpeed": 0.015
+    }
+  },
+  {
+    "id": "earth",
+    "name": "Earth",
+    "member": "Raekwon",
+    "aliases": ["The Chef", "Lex Diamonds"],
+    "order": 3,
+    "type": "rocky",
+    "scientificTraits": {
+      "composition": "Rocky with water and atmosphere",
+      "atmosphere": "Nitrogen-Oxygen - habitable zone",
+      "keyFeatures": [
+        "Only known habitable planet",
+        "Complex ecosystems",
+        "Liquid water sustains life"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Street narratives - creates habitable worlds",
+      "role": "The Chef - provides sustenance",
+      "lessonFocus": "Creating Habitable Ecosystems",
+      "conceptBlurbs": [
+        "Only Built 4 Cuban Linx created the blueprint",
+        "Like Earth, provides the habitable narrative environment",
+        "Complex storytelling ecosystems"
+      ]
+    },
+    "visual": {
+      "color": "#4A90E2",
+      "radius": 1.0,
+      "orbitRadius": 16,
+      "orbitSpeed": 0.012
+    }
+  },
+  {
+    "id": "mars",
+    "name": "Mars",
+    "member": "Ghostface Killah",
+    "aliases": ["Ironman", "Tony Starks", "Pretty Toney"],
+    "order": 4,
+    "type": "rocky",
+    "scientificTraits": {
+      "composition": "Iron oxide (rust) - red planet",
+      "atmosphere": "Stripped by solar wind - lost magnetic shield",
+      "keyFeatures": [
+        "Red from iron oxide",
+        "Lost protective magnetic field",
+        "Scarred by ancient volcanoes"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Raw, emotional, vulnerable",
+      "role": "Ironman without shield",
+      "lessonFocus": "Vulnerability & Emotional Exposure",
+      "conceptBlurbs": [
+        "Like Mars, lost his protective shield (emotional guard)",
+        "Iron oxide = Ironman persona",
+        "Emotional rawness creates beautiful scarred landscapes"
+      ]
+    },
+    "visual": {
+      "color": "#CD5C5C",
+      "radius": 0.5,
+      "orbitRadius": 20,
+      "orbitSpeed": 0.01
+    }
+  },
+  {
+    "id": "jupiter",
+    "name": "Jupiter",
+    "member": "U-God",
+    "aliases": ["Golden Arms", "Lucky Hands"],
+    "order": 5,
+    "type": "gas-giant",
+    "scientificTraits": {
+      "composition": "Hydrogen & Helium gas",
+      "atmosphere": "Massive storms and thick atmosphere",
+      "keyFeatures": [
+        "Largest planet - cosmic shield",
+        "Gravity deflects asteroids",
+        "Protects inner planets"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Bass-heavy enforcer",
+      "role": "The Shield - absorbed hits for the group",
+      "lessonFocus": "Protection & System Defense",
+      "conceptBlurbs": [
+        "Like Jupiter, absorbs impacts to protect the system",
+        "Golden Arms deflects threats",
+        "Massive presence in the Clan's defense"
+      ]
+    },
+    "visual": {
+      "color": "#DAA520",
+      "radius": 2.5,
+      "orbitRadius": 28,
+      "orbitSpeed": 0.006
+    }
+  },
+  {
+    "id": "saturn",
+    "name": "Saturn",
+    "member": "Masta Killa",
+    "aliases": ["Noodles", "High Chief"],
+    "order": 6,
+    "type": "gas-giant",
+    "scientificTraits": {
+      "composition": "Hydrogen & Helium with spectacular rings",
+      "atmosphere": "Organized beauty from chaos",
+      "keyFeatures": [
+        "Famous ring system",
+        "Debris organized into structure",
+        "Resonance with Jupiter"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Patient, disciplined, structured",
+      "role": "The Student of discipline",
+      "lessonFocus": "Structure from Patience",
+      "conceptBlurbs": [
+        "Waited 10 years for No Said Date",
+        "Like Saturn's rings, patience creates structure",
+        "Turned waiting into organized beauty"
+      ]
+    },
+    "visual": {
+      "color": "#F4E7D7",
+      "radius": 2.0,
+      "orbitRadius": 35,
+      "orbitSpeed": 0.005
+    }
+  },
+  {
+    "id": "uranus",
+    "name": "Uranus",
+    "member": "Inspectah Deck",
+    "aliases": ["Rebel INS", "Rollie Fingers"],
+    "order": 7,
+    "type": "ice-giant",
+    "scientificTraits": {
+      "composition": "Ice and gas - tilted axis",
+      "atmosphere": "Rotates on its side (97° tilt)",
+      "keyFeatures": [
+        "Rotates sideways due to ancient collision",
+        "Unique perspective in solar system",
+        "Different orientation"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Unique perspective and angle",
+      "role": "The Rebel - sees differently",
+      "lessonFocus": "Alternative Perspectives",
+      "conceptBlurbs": [
+        "Like Uranus, sees the world from a tilted angle",
+        "Uncontrolled Substance from unique viewpoint",
+        "Observes then attacks from unexpected angles"
+      ]
+    },
+    "visual": {
+      "color": "#4FD0E0",
+      "radius": 1.5,
+      "orbitRadius": 42,
+      "orbitSpeed": 0.004
+    }
+  },
+  {
+    "id": "neptune",
+    "name": "Neptune",
+    "member": "Ol' Dirty Bastard",
+    "aliases": ["ODB", "Dirt McGirt", "Big Baby Jesus"],
+    "order": 8,
+    "type": "ice-giant",
+    "scientificTraits": {
+      "composition": "Ice and gas with supersonic winds",
+      "atmosphere": "Fastest winds in solar system (1500 mph)",
+      "keyFeatures": [
+        "Supersonic winds up to 1500 mph",
+        "Chaotic, unpredictable weather",
+        "Pure high-energy chaos"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Chaotic, unstructured, high-energy",
+      "role": "No father to his style - pure chaos",
+      "lessonFocus": "High Chaos vs High Density",
+      "conceptBlurbs": [
+        "Like Neptune's supersonic winds, pure chaotic energy",
+        "Unpredictability kept the group from stagnating",
+        "Return to the 36 Chambers represents raw atmospheric chaos"
+      ]
+    },
+    "visual": {
+      "color": "#4169E1",
+      "radius": 1.4,
+      "orbitRadius": 48,
+      "orbitSpeed": 0.003
+    }
+  },
+  {
+    "id": "pluto",
+    "name": "Pluto",
+    "member": "Cappadonna",
+    "aliases": ["Donna", "Cap"],
+    "order": 9,
+    "type": "dwarf",
+    "scientificTraits": {
+      "composition": "Ice and rock - Kuiper Belt object",
+      "atmosphere": "Thin, eccentric orbit",
+      "keyFeatures": [
+        "Reclassified as dwarf planet",
+        "Eccentric orbit",
+        "Part of larger Kuiper Belt system"
+      ]
+    },
+    "culturalTraits": {
+      "style": "Essential but debated status",
+      "role": "The 10th Member - official status questioned",
+      "lessonFocus": "Resilience & Identity",
+      "conceptBlurbs": [
+        "Incarcerated during 36 Chambers (exiled from system)",
+        "Official status debated like Pluto's planet classification",
+        "Essential to Wu-Tang history despite debates"
+      ]
+    },
+    "visual": {
+      "color": "#B8A898",
+      "radius": 0.3,
+      "orbitRadius": 54,
+      "orbitSpeed": 0.002
+    }
+  }
+]
