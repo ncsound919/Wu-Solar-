@@ -90,7 +90,7 @@ function GravitationalCoherence() {
 
   useEffect(() => {
     markModuleVisited(moduleId)
-  }, [markModuleVisited])
+  }, [markModuleVisited, moduleId])
 
   const handleQuizComplete = (score: number) => {
     saveQuizScore(moduleId, score)
