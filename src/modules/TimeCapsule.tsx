@@ -33,7 +33,7 @@ function TimeCapsule() {
 
   useEffect(() => {
     markModuleVisited(moduleId)
-  }, [markModuleVisited])
+  }, [markModuleVisited, moduleId])
 
   const handleQuizComplete = (quizScore: number) => {
     saveQuizScore(moduleId, quizScore)
