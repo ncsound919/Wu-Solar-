@@ -83,20 +83,24 @@ export function useProgress() {
 
   const saveQuizScore = useCallback((moduleId: string, score: number) => {
     setProgress(prev => {
-      const oldScore = prev.modules[moduleId]?.quizScore || 0
-      const scoreDiff = score - oldScore
+      const updatedModules = {
+        ...prev.modules,
+        [moduleId]: {
+          ...prev.modules[moduleId] || defaultModuleProgress,
+          quizScore: score,
+          quizCompleted: true,
+          completed: true
+        }
+      }
+
+      const totalScore = Object.values(updatedModules).reduce((sum, module) => {
+        return sum + (typeof module.quizScore === 'number' ? module.quizScore : 0)
+      }, 0)
+
       return {
         ...prev,
-        modules: {
-          ...prev.modules,
-          [moduleId]: {
-            ...prev.modules[moduleId] || defaultModuleProgress,
-            quizScore: score,
-            quizCompleted: true,
-            completed: true
-          }
-        },
-        totalScore: prev.totalScore + (scoreDiff > 0 ? scoreDiff : 0),
+        modules: updatedModules,
+        totalScore,
         lastUpdated: new Date().toISOString()
       }
     })
