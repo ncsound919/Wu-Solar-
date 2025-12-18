@@ -9,7 +9,6 @@ export interface QuizQuestion {
 }
 
 interface QuizProps {
-  moduleId: string
   moduleName: string
   questions: QuizQuestion[]
   onComplete: (score: number) => void

@@ -357,7 +357,6 @@ My style is wild, there ain't no doubt`
             </button>
           ) : (
             <Quiz
-              moduleId={moduleId}
               moduleName="Lyrical Density"
               questions={lyricalDensityQuiz}
               onComplete={handleQuizComplete}

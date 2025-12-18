@@ -103,8 +103,16 @@ export function useProgress() {
   }, [])
 
   const resetProgress = useCallback(() => {
-    setProgress(defaultProgress)
-    localStorage.removeItem(STORAGE_KEY)
+    setProgress({
+      modules: {
+        'gravitational-coherence': { ...defaultModuleProgress },
+        'lyrical-density': { ...defaultModuleProgress },
+        'atmosphere-shielding': { ...defaultModuleProgress },
+        'time-capsule': { ...defaultModuleProgress }
+      },
+      totalScore: 0,
+      lastUpdated: new Date().toISOString()
+    })
   }, [])
 
   const getModuleProgress = useCallback((moduleId: string): ModuleProgress => {

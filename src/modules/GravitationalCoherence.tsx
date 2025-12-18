@@ -236,7 +236,6 @@ function GravitationalCoherence() {
             </button>
           ) : (
             <Quiz
-              moduleId={moduleId}
               moduleName="Gravitational Coherence"
               questions={gravitationalCoherenceQuiz}
               onComplete={handleQuizComplete}

@@ -410,7 +410,6 @@ function AtmosphereShielding() {
             </button>
           ) : (
             <Quiz
-              moduleId={moduleId}
               moduleName="Atmosphere & Shielding"
               questions={atmosphereShieldingQuiz}
               onComplete={handleQuizComplete}

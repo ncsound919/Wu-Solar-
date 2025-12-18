@@ -435,7 +435,6 @@ function TimeCapsule() {
             </button>
           ) : (
             <Quiz
-              moduleId={moduleId}
               moduleName="Time Capsule"
               questions={timeCapsuleQuiz}
               onComplete={handleQuizComplete}
