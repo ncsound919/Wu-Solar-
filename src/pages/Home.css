@@ -206,6 +206,10 @@
     grid-template-columns: 1fr;
   }
 
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
   .philosophy-questions {
     grid-template-columns: 1fr;
   }
