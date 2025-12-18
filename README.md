@@ -294,7 +294,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Issues**: [GitHub Issues](https://github.com/ncsound919/Wu-Solar-/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/ncsound919/Wu-Solar-/discussions)
-
+Instagram/Overlay365
 ---
 
 <div align="center">
@@ -303,6 +303,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 *Teaching the Physics of Synergy*
 
-Made with ☯️ by the Wu-Solar Community
+Made with ☯️ by Overlay365
 
 </div>
