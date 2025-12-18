@@ -66,10 +66,23 @@ function Quiz({ moduleName, questions, onComplete, previousScore }: QuizProps) {
         <div className="quiz-complete">
           <h2>🎓 Quiz Complete!</h2>
           <div className="quiz-score">
-            <div className="score-number" style={{ 
-              color: finalScore >= 80 ? '#44ff44' : finalScore >= 60 ? '#ffaa00' : '#ff4444' 
-            }}>
-              {finalScore}%
+            <div
+              className="score-number"
+              style={{
+                color: finalScore >= 80 ? '#44ff44' : finalScore >= 60 ? '#ffaa00' : '#ff4444'
+              }}
+              aria-label={`Score: ${finalScore}%. ${
+                finalScore >= 80
+                  ? 'Excellent performance.'
+                  : finalScore >= 60
+                  ? 'Good performance.'
+                  : 'Needs improvement.'
+              }`}
+            >
+              <span className="score-icon" aria-hidden="true">
+                {finalScore >= 80 ? '✓' : finalScore >= 60 ? '~' : '✗'}
+              </span>{' '}
+              <span className="score-value">{finalScore}%</span>
             </div>
             <p>{correctAnswers} out of {questions.length} correct</p>
           </div>
